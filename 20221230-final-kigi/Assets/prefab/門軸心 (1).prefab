@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8947021880456923535}
   - component: {fileID: 8947021880456923534}
   - component: {fileID: 8857928362171381160}
-  - component: {fileID: 4458528762508815302}
+  - component: {fileID: 1199778516953080424}
   m_Layer: 0
   m_Name: "\u9580\u8EF8\u5FC3 (1)"
   m_TagString: Untagged
@@ -68,7 +68,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.11430597, y: 1.4469151, z: 0.9220577}
   m_Center: {x: -0.0043447018, y: 0.015019894, z: -0.43477884}
---- !u!114 &4458528762508815302
+--- !u!114 &1199778516953080424
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -77,10 +77,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8947021880456923528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e2ac8ae46b6a9c4c896e1f4c0a3bca7, type: 3}
+  m_Script: {fileID: 11500000, guid: 8928ecafc4c757c43929f3a2ecd0f64a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doorAim: {fileID: 8947021880456923534}
 --- !u!1001 &8947021879547707262
 PrefabInstance:
   m_ObjectHideFlags: 0

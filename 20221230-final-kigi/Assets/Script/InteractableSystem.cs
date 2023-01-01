@@ -19,7 +19,7 @@ namespace Uzai
 
         private void DoorReapeat()
         {
-            doorAim.Play("", 1);
+            doorAim.Play("dooronoff", 1);
         }
     }
 
