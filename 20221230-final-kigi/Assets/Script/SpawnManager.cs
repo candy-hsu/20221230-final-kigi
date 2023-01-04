@@ -10,7 +10,7 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-        float ReapeatTime = Random.Range(0.5f, 1);
+        float ReapeatTime = Random.Range(4, 8);
         InvokeRepeating("garbageSpawn", 3, ReapeatTime);
     }
 
