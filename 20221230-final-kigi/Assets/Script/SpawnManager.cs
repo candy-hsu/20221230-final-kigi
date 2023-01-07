@@ -3,10 +3,8 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject[] garbage;
-
-
+    public GameObject[] garbage;
+    
 
     void Start()
     {
@@ -21,5 +19,6 @@ public class SpawnManager : MonoBehaviour
         Instantiate(garbage[a_index], place, garbage[a_index].transform.rotation);
     }
 
+    
 
 }

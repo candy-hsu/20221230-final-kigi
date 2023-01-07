@@ -14,7 +14,7 @@ namespace Uzai
         [SerializeField, Header("旋轉速度"), Range(10, 100)]
         private float speedTurn = 50;
 
-        public ParticleSystem DirstSplatter;
+        public GameObject DirstSplatter;
 
         public Animator playerAnim;
 
@@ -31,15 +31,18 @@ namespace Uzai
             transform.Translate(Vector3.forward * Time.deltaTime * speedBackAndForward * v);
             transform.Rotate(Vector3.up * Time.deltaTime * speedTurn * h);
 
-            if (v > 0.2 || v < -0.2)
+                
+            if (Mathf.Abs(v) > 0.2f)
             {
                 playerAnim.SetFloat("Speed_f", 1);
-                DirstSplatter.Play();
+                DirstSplatter.SetActive(true);
+
             }
             else
             {
                 playerAnim.SetFloat("Speed_f", 0);
-                DirstSplatter.Stop();
+                DirstSplatter.SetActive(false);
+
             }
 
             
