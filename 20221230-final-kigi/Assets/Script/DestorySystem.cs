@@ -1,9 +1,9 @@
-
+ï»¿
 using UnityEngine;
 namespace Uzai
 {
     /// <summary>
-    /// ·´·À¨t²Î
+    /// æ¯€æ»…ç³»çµ±
     /// </summary>
     public class DestorySystem : MonoBehaviour
     {
@@ -17,7 +17,7 @@ namespace Uzai
             if (collision.gameObject.name.Contains(playerString))
             {
                 AudioSource.PlayClipAtPoint(garbageSfx, player.transform.position);
-                //print("ª«¥ó®ø¥¢");
+                //print("ç‰©ä»¶æ¶ˆå¤±");
                 Destroy(gameObject);
             }
         }
