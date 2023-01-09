@@ -1,6 +1,7 @@
 ﻿
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+
 
 namespace Uzai
 {
@@ -18,6 +19,11 @@ namespace Uzai
 
         public Animator playerAnim;
 
+        //[Header("跟隨")]
+        //public GameObject ghostFollow;
+        //public List<Vector3> positionList;
+        //public int distance = 5;
+
         private void Start()
         {
             playerAnim = GetComponent<Animator>();
@@ -31,7 +37,7 @@ namespace Uzai
             transform.Translate(Vector3.forward * Time.deltaTime * speedBackAndForward * v);
             transform.Rotate(Vector3.up * Time.deltaTime * speedTurn * h);
 
-                
+
             if (Mathf.Abs(v) > 0.2f)
             {
                 playerAnim.SetFloat("Speed_f", 1);
@@ -45,7 +51,12 @@ namespace Uzai
 
             }
 
-            
+            //positionList.Add(transform.position);
+            //if (positionList.Count > distance)
+            //{
+               // positionList.RemoveAt(0);
+               // ghostFollow.transform.position = positionList[0];
+           // }
 
         }
     }
