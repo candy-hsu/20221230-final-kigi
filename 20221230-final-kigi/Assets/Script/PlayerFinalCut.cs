@@ -1,9 +1,11 @@
-
+﻿
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Uzai
-{
+{/// <summary>
+/// 切換場景
+/// </summary>
     public class PlayerFinalCut : MonoBehaviour
     {
         [SerializeField]

@@ -1,8 +1,11 @@
-
+﻿
 using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
+    /// <summary>
+    /// 生成系統
+    /// </summary>
     public GameObject[] garbage;
     
 

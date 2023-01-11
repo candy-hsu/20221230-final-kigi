@@ -19,6 +19,10 @@ namespace Uzai
 
         public Animator playerAnim;
 
+        private bool playerInput;
+        private CanvasGroup groupDialogue;
+
+
         //[Header("跟隨")]
         //public GameObject ghostFollow;
         //public List<Vector3> positionList;
@@ -27,15 +31,30 @@ namespace Uzai
         private void Start()
         {
             playerAnim = GetComponent<Animator>();
+            groupDialogue = GameObject.Find("畫布對話系統").GetComponent<CanvasGroup>();
         }
 
         private void Update()
         {
             float v = Input.GetAxis("Vertical");
             float h = Input.GetAxis("Horizontal");
+            if (groupDialogue.alpha > 0)
+            {
+                playerInput = false;
+            }
+            else 
+            {
+                playerInput = true; 
+            }
 
-            transform.Translate(Vector3.forward * Time.deltaTime * speedBackAndForward * v);
-            transform.Rotate(Vector3.up * Time.deltaTime * speedTurn * h);
+            if (playerInput == true)
+            {
+                transform.Translate(Vector3.forward * Time.deltaTime * speedBackAndForward * v);
+                transform.Rotate(Vector3.up * Time.deltaTime * speedTurn * h);
+            }
+               
+           
+
 
 
             if (Mathf.Abs(v) > 0.2f)
@@ -54,9 +73,9 @@ namespace Uzai
             //positionList.Add(transform.position);
             //if (positionList.Count > distance)
             //{
-               // positionList.RemoveAt(0);
-               // ghostFollow.transform.position = positionList[0];
-           // }
+            // positionList.RemoveAt(0);
+            // ghostFollow.transform.position = positionList[0];
+            // }
 
         }
     }

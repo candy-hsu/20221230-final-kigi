@@ -24,7 +24,8 @@ namespace Uzai
         private TextMeshProUGUI textContent;
         private GameObject goTriangle;
 
-        private PlayerInput playerInput;
+        //public GameObject playerInput;
+        //private PlayerInput playerInput;
         private UnityEvent onDialogueFinish;
 
         private void Awake()
@@ -35,13 +36,14 @@ namespace Uzai
             goTriangle = GameObject.Find("對話完成圖示");
             goTriangle.SetActive(false);
 
-            playerInput = GameObject.Find("PlayerCapsule").GetComponent<PlayerInput>();
+            //playerInput = GameObject.Find("Player").GetComponent<PlayerInput>();
             StarDialogue(dialogueOpening);
         }
 
         public void StarDialogue(DialogueData data, UnityEvent _onDialogueFinish = null)
         {
-            playerInput.enabled = false;
+            //playerInput.SetActive(false);
+            //playerInput.enabled = false;
             StartCoroutine(FadeGroup());
             StartCoroutine(TypeEffect(data));
             onDialogueFinish = _onDialogueFinish;
@@ -85,7 +87,8 @@ namespace Uzai
 
             }
             StartCoroutine(FadeGroup(false));
-            playerInput.enabled = true;
+            //playerInput.SetActive(true);
+            //playerInput.enabled = true;
             onDialogueFinish?.Invoke();
         }
     }

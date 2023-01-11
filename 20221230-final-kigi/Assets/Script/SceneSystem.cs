@@ -1,8 +1,11 @@
-using UnityEngine.SceneManagement;
+﻿using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine;
 namespace Uzai
 {
+    /// <summary>
+    /// 切換場景
+    /// </summary>
     public class SceneSystem : MonoBehaviour
     {
 
@@ -13,7 +16,7 @@ namespace Uzai
 
         void OnClick()
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(3);
         }
     }
 }
